@@ -331,6 +331,15 @@ section {
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth zoom effect */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+  will-change: opacity, transform;
+}
+
+.portfolio-item.animated-up {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .portfolio-item h3 {

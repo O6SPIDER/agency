@@ -1,4 +1,4 @@
-/* Basic Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,15 +9,14 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Ensure the body and HTML take up the full height */
+
 html, body {
   height: 100%;
   margin: 0;
   display: flex;
-  flex-direction: column; /* Stack content vertically */
+  flex-direction: column;
 }
 
-/* Soft, modern background for the whole site */
 body {
   background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
   min-height: 100vh;
@@ -26,14 +25,14 @@ body {
   line-height: 1.6;
 }
 
-/* Main content should take up remaining space */
+
 main {
-  flex: 1; /* Allow the main content to grow and fill available space */
+  flex: 1;
 }
 
-/* Fixed Header */
+
 .header {
-  position: fixed; /* Fix the header at the top of the page */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -41,9 +40,9 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0); /* Semi-transparent background for better readability */
-  z-index: 1000; /* Ensure the header is above all other elements */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  background: rgba(0, 0, 0, 0);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 /* Header with Dark Background */
@@ -1070,12 +1069,10 @@ footer {
   box-shadow: 0 6px 24px rgba(30, 144, 255, 0.13);
 }
 
-/* Ensure the contact section is visible */
 .contact {
-  z-index: 1; /* Ensure it appears above other elements */
-}
+  z-index: 1;
 
-/* Responsive Design for Contact Section */
+
 @media (max-width: 768px) {
   .contact h2 {
     font-size: 2rem;
@@ -1097,7 +1094,7 @@ footer {
   }
 }
 
-/* Modern Contact Section */
+
 .contact-modern {
   position: relative;
   display: flex;
@@ -1110,7 +1107,7 @@ footer {
   z-index: 1;
 }
 
-/* Liquid animated background */
+
 .liquid-bg {
   position: absolute;
   top: 50%; left: 50%;
@@ -1242,7 +1239,6 @@ footer {
   box-shadow: 0 6px 24px rgba(30, 144, 255, 0.13);
 }
 
-/* --- Catchy, Modern, and On-Brand Contact Section --- */
 .contact-section {
   background: linear-gradient(120deg, #e0e7ff 0%, #f8fafc 100%);
   padding: 90px 0 70px 0;
@@ -1291,7 +1287,7 @@ footer {
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
   background-clip: unset;
-  color: #fff; /* Use white for visibility on blue background */
+  color: #fff;
 }
 
 .contact-catchy-desc {
@@ -1376,7 +1372,7 @@ footer {
   box-shadow: 0 6px 24px rgba(30, 144, 255, 0.13);
 }
 
-/* Responsive Styles */
+
 @media (max-width: 900px) {
   .contact-catchy-wrapper {
     flex-direction: column;
@@ -1408,7 +1404,7 @@ footer {
   }
 }
 
-/* --- Parallax for Every Section --- */
+
 section.parallax-section {
   position: relative;
   z-index: 1;

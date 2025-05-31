@@ -8,12 +8,14 @@
   <meta name="description" content="Spiderwebs Agency Blog - Insights, tips, and trends in web development, design, and digital strategy.">
   <meta name="keywords" content="web development, web design, digital agency, blog, SEO, branding, portfolio, spiderwebs">
   <meta name="author" content="Spiderwebs Agency">
-  <link rel="icon" type="image/png" href="main.png">
+  <link rel="icon" type="image/png" href="main.png" sizes="32x32">
   <link rel="shortcut icon" type="image/png" href="main.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <link rel="apple-touch-icon" href="real.png" sizes="180x180">
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -34,7 +36,9 @@
     <section id="home" class="hero">
       <img src="bdbg.jpg" alt="Hero Background" class="hero-image">
       <div class="hero-content">
-        <h1><span id="typewriter"></span></h1>
+        <h1>
+          <span id="typewriter" aria-live="polite">&ZeroWidthSpace;</span>
+        </h1>
         <p>Web Design & Development</p>
         <a href="#about" class="cta-btn">Discover More</a>
       </div>
@@ -269,6 +273,9 @@
     </section>
   </main>
   <footer class="footer">
+    <div class="footer-logo">
+      <img src="footer.png" alt="Spiderwebs Logo" style="height:60px; width:auto; margin-bottom:18px;">
+    </div>
     <div class="footer-container">
       <div class="footer-column">
         <h4>About Us</h4>
@@ -291,9 +298,12 @@
       </div>
       <div class="footer-column">
         <h4>Follow Us</h4>
-        <div class="social-icons">
+        <div class="footer-icons">
           <a href="https://www.instagram.com/spiderwebs.online?igsh=MWNta2pxbmN6bGY5NA==">
-            <img src="https://img.icons8.com/?size=100&id=BrU2BBoRXiWq&format=png&color=000000" alt="Instagram">
+            <img src="https://img.icons8.com/?size=100&id=BrU2BBoRXiWq&format=png&color=000000" alt="Instagram" width="24" height="24">
+          </a>
+          <a href="https://www.linkedin.com/in/spider-webs-931865367">
+            <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn" width="24" height="24">
           </a>
         </div>
       </div>
@@ -309,7 +319,7 @@
       <button onclick="document.getElementById('thankYouPopup').style.display='none'" style="margin-top:18px; padding:10px 28px; background:linear-gradient(90deg,#1e90ff 0%,#00d9ff 100%); color:#fff; border:none; border-radius:6px; font-size:1rem; cursor:pointer;">Close</button>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <script src="portfolio-animate.js"></script>
   <script>
     document.getElementById("contactForm").addEventListener("submit", function (e) {

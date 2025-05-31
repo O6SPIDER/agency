@@ -320,6 +320,13 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px; /* Add spacing between the cards */
   justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
 .portfolio-item {
@@ -328,10 +335,9 @@ section {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   padding: 20px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth zoom effect */
+  transition: transform 0.8s cubic-bezier(.4,0,.2,1), box-shadow 0.3s ease, opacity 0.6s cubic-bezier(.4,0,.2,1); /* Smooth zoom and fade effect */
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.6s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
   will-change: opacity, transform;
 }
 
@@ -354,43 +360,17 @@ section {
   font-size: 1rem;
   color: #555555; /* Medium gray for text */
 }
-
-.portfolio-section {
-  padding: 60px 20px;
-  background: #f9f9f9;
-  text-align: center;
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
-
-.portfolio-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
 .portfolio-intro {
   max-width: 600px;
   margin: 0 auto 40px;
   font-size: 1.1em;
   line-height: 1.6;
-}
-
-.portfolio-items {
-  display: grid;
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.portfolio-item {
-  background: #fff;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-}
-
-.portfolio-item h3 {
-  margin-bottom: 10px;
-  font-size: 1.3em;
 }
 
 .portfolio-cta {
@@ -435,6 +415,8 @@ section {
   overflow-x: auto; /* Enable horizontal scrolling */
   scroll-snap-type: x mandatory; /* Snap to slides when scrolling */
   padding-bottom: 10px; /* Add padding to avoid scrollbar overlap */
+   -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
 .testimonial-slide {
@@ -471,10 +453,6 @@ section {
   display: none;
 }
 
-.testimonial-scroll {
-  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
-}
 
 /* Blog Section */
 .blog-section {
@@ -500,6 +478,8 @@ section {
   overflow-x: auto; /* Enable horizontal scrolling */
   scroll-snap-type: x mandatory; /* Snap to cards when scrolling */
   padding-bottom: 10px; /* Add padding to avoid scrollbar overlap */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
 .blog-card {
@@ -564,11 +544,6 @@ section {
 /* Hide scrollbar for a cleaner look */
 .blog-scroll::-webkit-scrollbar {
   display: none;
-}
-
-.blog-scroll {
-  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
 /* Blog List Layout */
@@ -673,6 +648,7 @@ section {
   padding: 50px 20px;
   text-align: center;
   background-color: #f8f8f8; /* Light gray background */
+  display: none;
 }
 
 .team-section h2 {
@@ -731,11 +707,6 @@ section {
   color: #555555; /* Medium gray for roles and descriptions */
 }
 
-/* Hide Team Section */
-.team-section {
-  display: none; /* Temporarily hide the team section */
-}
-
 /* Footer */
 footer {
   background: #333; /* Dark background */
@@ -758,6 +729,21 @@ footer {
   padding: 40px 24px 20px 24px;
   color: #222;
   text-align: center;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  height: auto;
+  width: auto;
+  margin-bottom: 18px;
+  display: block;
+
 }
 
 .footer-container {
@@ -874,12 +860,8 @@ footer {
 #typewriter {
   display: inline-block;
   border-right: 2px solid #1e90ff; /* Blinking cursor with Dodger Blue color */
-  color: #0a0a0a; /* Change the text color to Dodger Blue */
+  /* color property removed to allow gradient text */
   animation: blink 0.7s step-end infinite;
-}
-
-/* Gradient color for typewriter text */
-#typewriter {
   background: linear-gradient(90deg,#43cea2 0%,#185a9d  #2b5876 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -944,7 +926,6 @@ footer {
   justify-content: center; /* Center the text vertically */
   box-sizing: border-box; /* Include padding in width calculation */
   margin: 0 auto; /* Center the contact info */
-  padding: 20px; /* Add padding for better readability */
 }
 
 .contact-info h3 {
@@ -1038,21 +1019,6 @@ section.parallax-section > * {
   margin-bottom: 12px;
 }
 
-/* Blog Page Header Styles */
-.blog-page .header {
-  background: #111;
-  color: #fff;
-}
-
-.blog-page .header .logo,
-.blog-page .header .navbar a {
-  color: #fff;
-}
-
-.blog-page .header .navbar a:hover,
-.blog-page .header .navbar a:focus {
-  color: #00d9ff;
-}
 
 /* Contact Section Modern Styles */
 .contact-section {
@@ -1086,8 +1052,8 @@ section.parallax-section > * {
 }
 
 .contact-catchy-side-content {
-  width: 100%;
-  text-align: left;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-catchy-mail {
@@ -1144,6 +1110,15 @@ section.parallax-section > * {
   min-height: 90px;
   resize: vertical;
 }
+.contact-catchy-title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  text-shadow:  0 1px 2px #ffffff; /* Optional: for better contrast */
+}
 
 .contact-catchy-btn {
   background: linear-gradient(90deg, #1e90ff 0%, #00d9ff 100%);
@@ -1186,4 +1161,32 @@ section.parallax-section > * {
   .contact-catchy-form {
     padding: 18px 6vw;
   }
+}
+
+/* Footer Icons */
+.footer-icons {
+  display: flex;
+  flex-direction: row;      /* Ensure icons are side by side */
+  justify-content: center; /* Align to the left under the heading */
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.footer-icons img {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.2s;
+}
+
+.footer-icons img:hover {
+  filter: brightness(1.3) drop-shadow(0 2px 4px #1e90ff44);
+}
+
+/* Focus Outline for Accessibility */
+a:focus, button:focus {
+  outline: 2px solid #1e90ff;
+  outline-offset: 2px;
 }
